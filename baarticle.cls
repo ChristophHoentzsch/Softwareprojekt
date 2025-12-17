@@ -64,7 +64,7 @@
 \RequirePackage{titlesec} % to reduce section spacing
 \RequirePackage{lipsum} % just to generate text for the example
 \RequirePackage[figure,table,code]{totalcount} % count entries in LoF and LoT, LoC
-\RequirePackage[bookmarksnumbered=true]{hyperref}
+\RequirePackage[bookmarksnumbered=true,hidelinks]{hyperref}
 
 % Load additional packages if in simple mode
 \iftoggle{baclssimple}{
@@ -284,7 +284,6 @@
         \end{center}
         \vfill
         \printcorrectors{\@batitlecorrector}\\
-        Tag der Themenübergabe: \@batitlethemedate \\
         Tag der Einreichung: \@batitlereturndate
         \vfill
     \end{titlepage}
@@ -449,7 +448,6 @@
             course=\@basimplecourse,
             number=\@basimplenumber,
             corrector=\@basimplecorrector,
-            themedate=\@basimplethemedate,
             returndate=\@basimplereturndate,
             type=\@basimpletype,
             degreetype=\@basimpledegreetype,
@@ -467,7 +465,7 @@
             }
         \fi
         \ifdefvoid{\basimpleabstract}{}{
-            \section*{Abstract}
+            \section*{KI-Vermerk}
             \basimpleabstract
             \clearpage
         }
